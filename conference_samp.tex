@@ -3,7 +3,7 @@
 
 % 上記 documentclass のオプションは自由に追加してもよい．
 
-\newcommand{\visualizationtitle}{「作品名」}
+\newcommand{\workname}{「作品名」}
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色用漢字}
 \newcommand{\recallcolor}{想起色}
@@ -48,7 +48,7 @@
 
 % 日本語タイトル
 \jtitle{
-\visualizationtitle{}:\\
+\workname{}:\\
 \colorname{}に用いられる漢字から想起される\\
 色空間内における漢字の可視化手法の提案
 }
@@ -106,7 +106,7 @@ endkty0509＠gmail.com
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
 そこで本研究では，\colorname{}を漢字に分解し，
 それらの漢字が用いられる色を元に，
-漢字を色空間内に表現した可視化作品\visualizationtitle{}を制作し，
+漢字を色空間内に表現した可視化作品\workname{}を制作し，
 漢字が\colorname{}から想起させる色に与えている影響について考察する．
 }
 
@@ -131,7 +131,7 @@ endkty0509＠gmail.com
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
 そこで本研究では，\colorname{}を漢字に分解し，
 それらの漢字が用いられる色を元に，
-漢字を色空間内に表現した可視化作品\visualizationtitle{}を制作し，
+漢字を色空間内に表現した可視化作品\workname{}を制作し，
 漢字が\colorname{}から想起させる色に与えている影響について考察する．
 
 \section{先行研究および関連作品}
@@ -144,7 +144,7 @@ NIPPON COLORS\cite{NipponColors}があげられる．
 NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 色見本の表示方法として，各色をマンセルの色立体を使って可視化している．
 
-\section{\visualizationtitle{}について}
+\section{\workname{}について}
 
 \subsection{技術説明}
 
@@ -163,21 +163,38 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 緋が示す色はRGB値で（204, 84, 58）である．
 紫が示す色はRGB値で（89, 44, 99）である．
 
-
 基本となる色データベースは，
 XX個の色とXX個の\colorname{}が登録されて，色と\colorname{}は一対多の関係にある．
 
-\begin{center}
-  \includegraphics[width=8cm,clip]{fig/vis1.eps}
-\end{center}
+また，本作品では漢字は単色で表示されるので，
+背景が単色だと観察しにくい色の漢字が出てきてしまう可能性が考えられるので，
+背景は和柄の幾何学模様をアニメーションさせた．
+% TODO: アニメーションさせた
 
-\begin{center}
+\begin{figure}[htbp]
   \includegraphics[width=8cm,clip]{fig/vis2.eps}
-\end{center}
+  \caption{\workname{}}
+  \label{works1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \includegraphics[width=8cm,clip]{fig/vis1.eps}
+  \caption{漢字群を上から俯瞰した様子}
+  \label{works1}
+\end{figure}
 
 \section{おわりに}
 
-本稿では，漢字が色イメージに与える色空間内におけるベクトルを推測し，その結果を考察した．
+本稿では，作品\workname{}を制作し，
+漢字が色イメージに与える影響を考察した．
+本作品では\colorkanji{}の色を，
+その\colorkanji{}が用いられる\colorname{}の平均色として扱ったが，
+「海」という漢字に注目してみると，
+「海」という漢字からは青系の色が想起させられると考えられるが，
+平均色は(xxx,yyy,zzz)と茶色に近い色になっていた．
+この理由として，「海」が用いられている漢字を全て観察した結果，
+6語の\colorname{}の内，
+4語が「海老」として用いられていたからだと考えられる．
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 参考文献
