@@ -3,7 +3,8 @@
 
 % 上記 documentclass のオプションは自由に追加してもよい．
 
-\newcommand{\workname}{「***作品名***」}
+\newcommand{\workname}{緋色の習作}
+\newcommand{\worknameen}{A study in scarlet}
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
@@ -49,13 +50,13 @@
 % 日本語タイトル
 \jtitle{
 \workname{}:\\
-\colorname{}に用いられる漢字から想起される\\
-色空間内における漢字の可視化手法の提案
+\colorname{}に用いられる漢字と想起される色の\\
+関係性の可視化手法の提案と考察
 }
 
 % 英語タイトル
 \etitle{
-「***name***」
+\worknameen{}
 }
 
 % 日本語著者
@@ -96,17 +97,11 @@ endkty0509＠gmail.com
 % 日本語概要
 \jabstract{
 色を表記する方法として，\colorname{}を用いることがある．
-たとえばRGB値で（134, 71, 63）と表される色は，
-深緋（こきあけ）という\colorname{}で表されることがある．
-上記の値から濃い赤色だということは想像できるが，
-色を数値で扱う習慣がなければ，
-数値から色を想像することは難しいと考えられる．
-しかし，深緋という\colorname{}が，「深」と「緋」の二つの漢字から構成されていることに注目すると，
+たとえば，深緋という\colorname{}が，「深」と「緋」の二つの漢字から構成されていることに注目すると，
 日本語話者には「深」という漢字からは暗さや濃さ，
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
 そこで本研究では，\colorname{}を漢字に分解し，
-それらの漢字が用いられる色を元に，
-漢字を色空間内に表現した可視化作品\workname{}を制作し，
+\colorname{}に用いられる漢字をの関係性を可視化した作品\workname{}を制作し，
 漢字が「\colorname{}から想起させる色」に与えている影響について考察する．
 }
 
@@ -122,17 +117,15 @@ endkty0509＠gmail.com
 色を表記する方法として，\colorname{}を用いることがある．
 たとえばRGB値で（134, 71, 63）と表される色は，
 深緋（こきあけ）という\colorname{}で表されることがある．
-上記の値から濃い赤色だということは想像できるが，
+上記の値から暗く濃い赤色だということは想像できるが，
 色を数値で扱う習慣がなければ，
 数値から色を想像することは難しいと考えられる．
-しかし，深緋という\colorname{}は，
-「深」と「緋」の二つの漢字から構成されていることに注目すると，
+しかし，深緋という\colorname{}が，「深」と「緋」の二つの漢字から構成されていることに注目すると，
 日本語話者には「深」という漢字からは暗さや濃さ，
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
 そこで本研究では，\colorname{}を漢字に分解し，
-それらの漢字が用いられる色を元に，
-漢字を色空間内に表現した可視化作品\workname{}を制作し，
-漢字が\colorname{}から想起させる色に与えている影響について考察する．
+\colorname{}に用いられる漢字をの関係性を可視化した作品\workname{}を制作し，
+漢字が「\colorname{}から想起させる色」に与えている影響について考察する．
 
 \section{先行研究および関連作品}
 
@@ -147,9 +140,9 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 
 上記のように，色彩語における漢字の果たす役割に関する研究や，
 日本の伝統色を可視化した作品の制作は多く行われているが，
-色彩語における漢字の果たす役割を表現した可視化作品は少ない．
+色彩語を漢字を構成する漢字の関係性を可視化した作品は少ない．
 
-\section{\workname{}について}
+\section{「\workname{}」について}
 
 \workname{}は3D空間に配置された，
 \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
@@ -194,16 +187,26 @@ HSV値を空間上にマッピングして配置した．
 % TODO: アニメーションさせた
 
 \begin{figure}[htbp]
-  \includegraphics[width=8cm,clip]{fig/vis2.eps}
-  \caption{\workname{}}
-  \label{works1}
+  \includegraphics[width=8cm,clip]{fig/kanji-color-space.eps}
+  \caption{No.1}
+  \label{no1}
 \end{figure}
 
 \begin{figure}[htbp]
-  \includegraphics[width=8cm,clip]{fig/vis1.eps}
-  \caption{漢字群を上から俯瞰した様子}
-  \label{works2}
+  \includegraphics[width=8cm,clip]{fig/kanji-color-graph.eps}
+  \caption{No.2}
+  \label{no2}
 \end{figure}
+
+\begin{figure}[htbp]
+  \includegraphics[width=8cm,clip]{fig/kanji-circle-color-graph.eps}
+  \caption{No.3}
+  \label{no3}
+\end{figure}
+
+\section{考察}
+
+可視化作品「\workname{}」では
 
 \section{おわりに}
 
