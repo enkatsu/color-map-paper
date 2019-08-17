@@ -8,6 +8,7 @@
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
+\setlength\intextsep{10pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ページ設定 (この項目は論文著者は編集しないこと．)
@@ -144,35 +145,85 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 
 \section{「\workname{}」について}
 
-\workname{}は3D空間に配置された，
-\colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
-\colorkanji{}が表す色（以降，\recallcolor{}とする）を鑑賞可能な可視化作品である．
+「\workname{}」はNo.1からNo.3の三つの可視化作品から構成される．
+以下の節にてそれぞれの作品について述べる．
 
-本作品における，基本となる色データベースは，
-XX種類の色とXX種類の\colorname{}が登録されていて，
-色と\colorname{}は一対多の関係にある．
+\subsection{No.1について}
 
-\colorname{}に使われている\colorkanji{}の\recallcolor{}は，
-それぞれの\colorkanji{}が使われている色の平均色を割り当てることで表現した．
-また，「色」という漢字は，
-「その単語が色を示している」という意味のみを表現していると考えられる．
-そのため，本作品では\recallcolor{}に影響を与えないものとして考える．
-よって，「肌色」のような\colorname{}は，
-「肌」という\colorkanji{}からのみ構成されている考えることとする．
+「\workname{} No.1」は，
+\colorname{}を漢字に分解し，
+それぞれの漢字が用いられる色彩の平均色を計算し，
+3次元空間内に配置した可視化作品である．
 
-\workname{}では，\colorkanji{}の3Dモデルを，
-上記の手法によって計算した\recallcolor{}でレンダリングし，
-HSV値を空間上にマッピングして配置した．
-また，\recallcolor{}は色の範囲が広いため，
-背景を単色にした際に，
-同色系の\colorkanji{}の鑑賞が難しくなる．
-よって，本作品は漢字をテーマとしていることから，
-背景には和風な幾何学模様を表示した．
-カメラの視点は，マウスドラッグとスクロールにより変更可能である．
-また，マウスクリックもしくは，
-セレクトボックスから注目したい漢字を選択することで，
-選択した漢字を中心とした鑑賞が可能である．
-図\ref{works1}と図\ref{works2}に作品が動作している様子を示す．
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=7cm,clip]{fig/kanji-color-space.eps}
+    \caption{No.1}
+    \label{no1}
+  \end{center}
+\end{figure}
+
+\subsection{No.2について}
+
+「\workname{} No.2」は，
+\colorname{}をノード，
+同じ漢字を使用している関係性をエッジとして，
+グラフ構造を可視化した作品である．
+ノードは力学モデルによって配置されるため，
+\colorname{}のクラスタを観察することが可能である．
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=7cm,clip]{fig/kanji-color-graph.eps}
+    \caption{No.2}
+    \label{no2}
+  \end{center}
+\end{figure}
+
+\subsection{No.3について}
+
+「\workname{} No.3」は，
+「\workname{} No.2」と同様の関係性を用いてグラフ構造を可視化した作品である．
+ノードは\colorname{}の色相によって円形に配置されていているため，
+\colorname{}と色相環の関係性を観察することが可能である．
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=7cm,clip]{fig/kanji-circle-color-graph.eps}
+    \caption{No.3}
+    \label{no3}
+  \end{center}
+\end{figure}
+
+% \workname{}は3D空間に配置された，
+% \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
+% \colorkanji{}が表す色（以降，\recallcolor{}とする）を鑑賞可能な可視化作品である．
+% 
+% 本作品における，基本となる色データベースは，
+% XX種類の色とXX種類の\colorname{}が登録されていて，
+% 色と\colorname{}は一対多の関係にある．
+% 
+% \colorname{}に使われている\colorkanji{}の\recallcolor{}は，
+% それぞれの\colorkanji{}が使われている色の平均色を割り当てることで表現した．
+% また，「色」という漢字は，
+% 「その単語が色を示している」という意味のみを表現していると考えられる．
+% そのため，本作品では\recallcolor{}に影響を与えないものとして考える．
+% よって，「肌色」のような\colorname{}は，
+% 「肌」という\colorkanji{}からのみ構成されている考えることとする．
+% 
+% \workname{}では，\colorkanji{}の3Dモデルを，
+% 上記の手法によって計算した\recallcolor{}でレンダリングし，
+% HSV値を空間上にマッピングして配置した．
+% また，\recallcolor{}は色の範囲が広いため，
+% 背景を単色にした際に，
+% 同色系の\colorkanji{}の鑑賞が難しくなる．
+% よって，本作品は漢字をテーマとしていることから，
+% 背景には和風な幾何学模様を表示した．
+% カメラの視点は，マウスドラッグとスクロールにより変更可能である．
+% また，マウスクリックもしくは，
+% セレクトボックスから注目したい漢字を選択することで，
+% 選択した漢字を中心とした鑑賞が可能である．
+% 図\ref{works1}と図\ref{works2}に作品が動作している様子を示す．
 
 % TODO: 参考になり得るデータを示す
 % 深緋を例として考えると，深緋が示す色はRGB値で（134, 71, 63）である．
@@ -186,41 +237,21 @@ HSV値を空間上にマッピングして配置した．
 % 背景は和柄の幾何学模様をアニメーションさせた．
 % TODO: アニメーションさせた
 
-\begin{figure}[htbp]
-  \includegraphics[width=8cm,clip]{fig/kanji-color-space.eps}
-  \caption{No.1}
-  \label{no1}
-\end{figure}
-
-\begin{figure}[htbp]
-  \includegraphics[width=8cm,clip]{fig/kanji-color-graph.eps}
-  \caption{No.2}
-  \label{no2}
-\end{figure}
-
-\begin{figure}[htbp]
-  \includegraphics[width=8cm,clip]{fig/kanji-circle-color-graph.eps}
-  \caption{No.3}
-  \label{no3}
-\end{figure}
-
 \section{考察}
 
-可視化作品「\workname{}」では
+「\workname{} No.1」は\colorkanji{}の色を，
+その\colorkanji{}が用いられる\colorname{}の平均色として扱ったが，
+「海」という漢字に注目してみると，
+「海」という漢字からは青系の\recallcolor{}が想起させられると考えられるが，
+平均色は(119, 90, 58)と茶色に近い色になった．
+この理由として，「海」が用いられている\colorname{}を観察した結果，
+6語の\colorname{}の内，3語が「海老」として用いられていたからだと考えられる．
+% この結果から，\colorkanji{}の組み合わせによって構成される単語も考慮する必要があると考えられる．
 
 \section{おわりに}
 
 本稿では，可視化作品\workname{}を制作し，
 漢字が\recallcolor{}に与える影響を考察した．
-本作品では\colorkanji{}の色を，
-その\colorkanji{}が用いられる\colorname{}の平均色として扱ったが，
-「海」という漢字に注目してみると，
-「海」という漢字からは青系の\recallcolor{}が想起させられると考えられるが，
-平均色は(xxx,yyy,zzz)と茶色に近い色になっていた．
-この理由として，「海」が用いられている漢字を全て観察した結果，
-6語の\colorname{}の内，4語が「海老」として用いられていたからだと考えられる．
-この結果から，\colorkanji{}の組み合わせによって構成される単語も考慮する必要があると考えられる．
-
 また，今後の展望として〜〜〜が考えられる．
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
