@@ -4,18 +4,18 @@
 % 上記 documentclass のオプションは自由に追加してもよい．
 
 \newcommand{\workname}{緋色の習作}
-\newcommand{\worknameen}{A study in scarlet}
+\newcommand{\worknameen}{A Study in Scarlet}
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
 \newcommand{\mysection}[1]{\vspace{-20pt}\section{#1}}
 \newcommand{\mysubsection}[1]{\vspace{-12pt}\subsection{#1}}
-\newcommand{\myfigure}[2]{
+\newcommand{\myfigure}[3]{
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=7cm,clip]{#1}
-    \caption{No.1}
-    \label{#2}
+    \caption{#2}
+    \label{#3}
   \end{center}
 \end{figure}
 \vspace{-3zh}
@@ -71,7 +71,7 @@
 
 % 英語タイトル
 \etitle{
-\worknameen{}
+\worknameen{}: Proposal and Consideration of Visualization Method of Relationship between Kanji Used for Color Words and Colors Represented by Color Words
 }
 
 % 日本語著者
@@ -116,9 +116,9 @@ endkty0509＠gmail.com
 「深」と「緋」の二つの漢字から構成されていることに注目すると，
 日本語話者には「深」という漢字からは暗さや濃さ，
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
-そこで，本研究では，\colorname{}を漢字に分解することで，
-\colorname{}に用いられる漢字の関係性を可視化した作品\workname{}を制作し，
-漢字が「\colorname{}から想起させる色」に与えている影響について考察する．
+そこで，本研究では\colorname{}を漢字に分解することで，
+\colorname{}に用いられる漢字の関係性を可視化した作品「\workname{}」を制作し，
+\colorname{}と色彩の関係について考察する．
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,9 +139,9 @@ endkty0509＠gmail.com
 「深」と「緋」の二つの漢字から構成されていることに注目すると，
 日本語話者には「深」という漢字からは暗さや濃さ，
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
-そこで，本研究では，\colorname{}を漢字に分解することで，
-\colorname{}に用いられる漢字の関係性を可視化した作品\workname{}を制作し，
-漢字が「\colorname{}から想起させる色」に与えている影響について考察する．
+そこで，本研究では\colorname{}を漢字に分解することで，
+\colorname{}に用いられる漢字の関係性を可視化した作品「\workname{}」を制作し，
+\colorname{}と色彩の関係について考察する．
 
 \mysection{先行研究および関連作品}
 
@@ -172,7 +172,7 @@ No.1は，
 3次元空間内に配置した可視化作品である．
 図\ref{no1}に動作している様子を示す．
 
-\myfigure{fig/kanji-color-space.eps}{no1}
+\myfigure{fig/kanji-color-space.eps}{No.1}{no1}
 
 \mysubsection{No.2について}
 
@@ -184,7 +184,7 @@ No.2は，
 同じ漢字を使用している\colorname{}のクラスタを観察することが可能である．
 図\ref{no2}に動作している様子を示す．
 
-\myfigure{fig/kanji-color-graph.eps}{no2}
+\myfigure{fig/kanji-color-graph.eps}{No.2}{no2}
 
 \mysubsection{No.3について}
 
@@ -194,7 +194,7 @@ No.2と同じ関係性を用いてグラフ構造を可視化した作品であ�
 \colorname{}の色相環上における関係性を観察することが可能である．
 図\ref{no3}に動作している様子を示す．
 
-\myfigure{fig/kanji-circle-color-graph.eps}{no3}
+\myfigure{fig/kanji-circle-color-graph.eps}{No.3}{no3}
 
 % \workname{}は3D空間に配置された，
 % \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
@@ -247,17 +247,17 @@ No.1からは，
 平均色は(119, 90, 58)と茶色に近い色となった．
 この理由として，「海」が用いられている\colorname{}を観察した結果，
 6語の\colorname{}の内，3語が「海老」として用いられていたからだと考えられる．
-この結果から，単語も考慮する必要があると考えられる．
+この結果から，\colorname{}を構成する単語も考慮する必要があると考えられる．
 
-また，No.2からは，
+またNo.2からは，
 「赤」や「紅」，「朱」，「緋」が同一ではない隣接するクラスタを作っていることが観察できた．
 また，これらのクラスタを比較し観察すると，
 それぞれのクラスタがわずかに異なる色の系統を表していると考えられる．
 
-最後に，No.3からは，
+最後にNo.3からは，
 茶色周辺には多くのエッジが密集しているが，
-青周辺にはエッジがまばらな点が観察できた，
-このことから，茶色を表す漢字は少なく，青を表す漢字は豊富だと考えられる．
+青周辺にはエッジがまばらなことが観察できた，
+このことから茶色を表す漢字は少なく，青を表す漢字は豊富だと考えられる．
 
 \mysection{おわりに}
 
