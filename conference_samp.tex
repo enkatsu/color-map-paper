@@ -8,10 +8,12 @@
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
-\setlength\intextsep{10pt}
-\setlength\textfloatsep{2truemm}
 \newcommand{\mysection}[1]{\vspace{-20pt}\section{#1}}
 \newcommand{\mysubsection}[1]{\vspace{-20pt}\subsection{#1}}
+
+\setlength\intextsep{10pt}
+\setlength\textfloatsep{2truemm}
+\setlength\abovecaptionskip{1truemm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ページ設定 (この項目は論文著者は編集しないこと．)
@@ -154,10 +156,11 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 
 \mysubsection{No.1について}
 
-「\workname{} No.1」は，
+No.1は，
 \colorname{}を漢字に分解し，
 それぞれの漢字が用いられる色彩の平均色を計算し，
 3次元空間内に配置した可視化作品である．
+図\ref{no1}に動作している様子を示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -167,14 +170,17 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
   \end{center}
 \end{figure}
 
+\vspace{-1zh}
+
 \mysubsection{No.2について}
 
-「\workname{} No.2」は，
+No.2は，
 \colorname{}をノード，
 同じ漢字を使用している関係性をエッジとして，
 グラフ構造を可視化した作品である．
 ノードは力学モデルによって配置されるため，
 同じ漢字を使用している\colorname{}のクラスタを観察することが可能である．
+図\ref{no2}に動作している様子を示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -184,12 +190,15 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
   \end{center}
 \end{figure}
 
+\vspace{-1zh}
+
 \mysubsection{No.3について}
 
-「\workname{} No.3」は，
-「\workname{} No.2」と同じ関係性を用いてグラフ構造を可視化した作品である．
+No.3は，
+No.2と同じ関係性を用いてグラフ構造を可視化した作品である．
 ノードは\colorname{}の色相によって円形に配置されていているため，
 \colorname{}の色相環上における関係性を観察することが可能である．
+図\ref{no3}に動作している様子を示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -198,6 +207,8 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
     \label{no3}
   \end{center}
 \end{figure}
+
+\vspace{-1zh}
 
 % \workname{}は3D空間に配置された，
 % \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
@@ -243,7 +254,7 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 
 \mysection{考察}
 
-「\workname{} No.1」からは
+No.1からは，
 「海」という漢字に注目した時に，
 青に近い\recallcolor{}を想起させられると考えられるが，
 平均色は(119, 90, 58)と茶色に近い色となった．
@@ -251,11 +262,11 @@ NIPPON COLORSは日本の伝統色を扱った色見本サイトだが，
 6語の\colorname{}の内，3語が「海老」として用いられていたからだと考えられる．
 この結果から，単語も考慮する必要があると考えられる．
 
-また，「\workname{} No.2」からは，
+また，No.2からは，
 「赤」や「紅」，「朱」が同一ではない隣接するクラスタを作っていることが観察できた．
 また，観察した結果から，これらのクラスタがわずかに異なる色の系統を表していると考えられる．
 
-最後に，「\workname{} No.3」からは，
+最後に，No.3からは，
 茶色周辺には多くのエッジが密集していることが観察できたが，
 逆に青周辺はエッジがまばらな点から，
 茶色を表す漢字は少なく，
