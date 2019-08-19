@@ -9,7 +9,17 @@
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
 \newcommand{\mysection}[1]{\vspace{-20pt}\section{#1}}
-\newcommand{\mysubsection}[1]{\vspace{-20pt}\subsection{#1}}
+\newcommand{\mysubsection}[1]{\vspace{-12pt}\subsection{#1}}
+\newcommand{\myfigure}[2]{
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=7cm,clip]{#1}
+    \caption{No.1}
+    \label{#2}
+  \end{center}
+\end{figure}
+\vspace{-2zh}
+}
 
 \setlength\intextsep{10pt}
 \setlength\textfloatsep{2truemm}
@@ -162,15 +172,7 @@ No.1は，
 3次元空間内に配置した可視化作品である．
 図\ref{no1}に動作している様子を示す．
 
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=7cm,clip]{fig/kanji-color-space.eps}
-    \caption{No.1}
-    \label{no1}
-  \end{center}
-\end{figure}
-
-\vspace{-1zh}
+\myfigure{fig/kanji-color-space.eps}{no1}
 
 \mysubsection{No.2について}
 
@@ -182,15 +184,7 @@ No.2は，
 同じ漢字を使用している\colorname{}のクラスタを観察することが可能である．
 図\ref{no2}に動作している様子を示す．
 
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=7cm,clip]{fig/kanji-color-graph.eps}
-    \caption{No.2}
-    \label{no2}
-  \end{center}
-\end{figure}
-
-\vspace{-1zh}
+\myfigure{fig/kanji-color-graph.eps}{no2}
 
 \mysubsection{No.3について}
 
@@ -200,15 +194,7 @@ No.2と同じ関係性を用いてグラフ構造を可視化した作品であ�
 \colorname{}の色相環上における関係性を観察することが可能である．
 図\ref{no3}に動作している様子を示す．
 
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=7cm,clip]{fig/kanji-circle-color-graph.eps}
-    \caption{No.3}
-    \label{no3}
-  \end{center}
-\end{figure}
-
-\vspace{-1zh}
+\myfigure{fig/kanji-circle-color-graph.eps}{no3}
 
 % \workname{}は3D空間に配置された，
 % \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
