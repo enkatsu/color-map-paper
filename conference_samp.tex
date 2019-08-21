@@ -8,8 +8,8 @@
 \newcommand{\colorname}{色彩語}
 \newcommand{\colorkanji}{色彩漢字}
 \newcommand{\recallcolor}{色イメージ}
-\newcommand{\mysection}[1]{\vspace{-20pt}\section{#1}}
-\newcommand{\mysubsection}[1]{\vspace{-18pt}\subsection{#1}}
+\newcommand{\mysection}[1]{\vspace{-23pt}\section{#1}\vspace{-5pt}}
+\newcommand{\mysubsection}[1]{\vspace{-19pt}\subsection{#1}\vspace{-5pt}}
 \newcommand{\myfigure}[3]{
 \begin{figure}[htbp]
   \begin{center}
@@ -77,7 +77,7 @@
 % 日本語著者
 % 所属参照は好みに応じて \dagger などを用いてもよい．
 \jauthor{
-遠藤勝也\(^{1)}\){\small (非会員)}
+遠藤勝也\(^{1)}\){\small (正会員)}
 % ~~~ % 氏名の間隔はチルダ記号や hspace 等で適宜調節のこと．
 % 科学次郎\(^{2)}\){\small (正会員)}
 }
@@ -111,14 +111,11 @@ endkty0509＠gmail.com
 
 % 日本語概要
 \jabstract{
-色を表記する方法として，\colorname{}を用いることがある．
-たとえば，深緋という\colorname{}が，
-「深」と「緋」の二つの漢字から構成されていることに注目すると，
-日本語話者には「深」という漢字からは暗さや濃さ，
-「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
-そこで，本研究では\colorname{}を漢字に分解することで，
-色と\colorname{}に用いられる漢字の関係性を可視化した作品「\workname{}」を制作し，
-その関係性について考察する．
+本研究では\colorname{}を漢字に分解することで，
+\colorname{}に用いられる漢字と色の関係性を可視化した作品「\workname{}」を制作した．
+本稿では，まず制作の背景について述べ，先行研究および関連作品をあげた上で，本作品について説明する．
+また，本作品によって得られた，\colorname{}に用いられる漢字と色の関係性について考察し，
+今後の展望について述べる．
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,7 +129,7 @@ endkty0509＠gmail.com
 
 色を表記する方法として，\colorname{}を用いることがある．
 たとえばRGB値で（134, 71, 63）と表される色は，
-深緋（こきあけ）という\colorname{}で表されることがある．
+深緋（こきあけ）という\colorname{}で表される．
 上記の値から暗く濃い赤色だということは想像できるが，
 色を数値で扱う習慣がなければ難しいと考えられる．
 しかし，深緋という\colorname{}が，
@@ -140,7 +137,7 @@ endkty0509＠gmail.com
 日本語話者には「深」という漢字からは暗さや濃さ，
 「緋」という漢字からは赤に近い色のような感覚が想起されると考えられる．
 そこで，本研究では\colorname{}を漢字に分解することで，
-色と\colorname{}に用いられる漢字の関係性を可視化した作品「\workname{}」を制作し，
+\colorname{}に用いられる漢字と色の関係性を可視化した作品「\workname{}」を制作し，
 その関係性について考察する．
 
 \mysection{先行研究および関連作品}
@@ -158,21 +155,56 @@ NIPPON COLORS\cite{NipponColors}があげられる．
 日本の伝統色を可視化した作品の制作は多く行われているが，
 色彩語を構成する漢字の関係性を可視化した作品は少ない．
 
+\vspace{-1zh}
+
+\begin{figure*}[h]
+  \begin{center}
+ \begin{minipage}{0.3\hsize}
+  \begin{center}
+   \includegraphics[width=5.5cm]{fig/kanji-color-space.eps}
+  \end{center}
+  \caption{No.1}
+  \label{fig:no1}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+  \includegraphics[width=5.5cm]{fig/kanji-color-graph.eps}
+ \end{center}
+  \caption{No.2}
+  \label{fig:no2}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+  \includegraphics[width=5.5cm]{fig/kanji-circle-color-graph.eps}
+ \end{center}
+  \caption{No.3}
+  \label{fig:no3}
+ \end{minipage}
+ \end{center}
+\end{figure*}
+
+\vspace{-3zh}
+
 \section{「\workname{}」について}
 
 「\workname{}」はNo.1からNo.3の三つの可視化作品から構成される．
-これらは\colorname{}と，色彩語が表す色彩のデータベースを使い制作されている．
+作品に使われたデータベースは，
+2019年6月15日時点でのWikipedia色名一覧のページ\cite{WikiColorName}の情報を元に構築した．
+このデータベースには，
+298語の\colorname{}と，
+\colorname{}に紐づくRGB値で表現された色が登録されている．
+また，\colorname{}は合計404種類の漢字から構成されている．
 以下の節でそれぞれの作品について述べる．
 
 \mysubsection{No.1について}
 
 No.1は，
 \colorname{}を漢字に分解し，
-それぞれの漢字が用いられる色彩の平均色を計算し，
+それぞれの漢字が用いられる色の平均色を計算し，
 計算された色を元にHSV空間内に配置した可視化作品である．
-図\ref{no1}に動作している様子を示す．
+図\ref{fig:no1}に動作している様子を示す．
 
-\myfigure{fig/kanji-color-space.eps}{No.1}{no1}
+% \myfigure{fig/kanji-color-space.eps}{No.1}{no1}
 
 \mysubsection{No.2について}
 
@@ -182,19 +214,22 @@ No.2は，
 グラフ構造を可視化した作品である．
 ノードは力学モデルによって配置されるため，
 同じ漢字を使用している\colorname{}のクラスタを観察することが可能である．
-図\ref{no2}に動作している様子を示す．
+また，ノードにマウスオーバーすることで，
+ノードが示す\colorname{}が表示される．
+図\ref{fig:no2}に動作している様子を示す．
 
-\myfigure{fig/kanji-color-graph.eps}{No.2}{no2}
+% \myfigure{fig/kanji-color-graph.eps}{No.2}{no2}
 
 \mysubsection{No.3について}
 
 No.3は，
-No.2と同じ関係性を用いてグラフ構造を可視化した作品である．
+No.2と同様の関係性を用いてグラフ構造を可視化した作品である．
 ノードは色相によって円形に配置されていているため，
 色相環上における関係性を観察することが可能である．
-図\ref{no3}に動作している様子を示す．
+また，No.2と同様のインタラクションにより\colorname{}が表示される．
+図\ref{fig:no3}に動作している様子を示す．
 
-\myfigure{fig/kanji-circle-color-graph.eps}{No.3}{no3}
+% \myfigure{fig/kanji-circle-color-graph.eps}{No.3}{no3}
 
 % \workname{}は3D空間に配置された，
 % \colorname{}に使われている漢字（以降，\colorkanji{}とする）と，
@@ -263,10 +298,10 @@ No.1を観察した結果，
 \mysection{おわりに}
 
 本稿では，可視化作品「\workname{}」を制作し，
-色と\colorname{}に用いられる漢字の関係性を考察した．
+\colorname{}に用いられる漢字と色の関係性を考察した．
 今後の展望として，
 本作品から得られた考察を定量的に評価し検証することで，
-新たな視点から\colorname{}と色彩の関係性を可視化することが可能だと考えられる．
+新たな視点から\colorname{}と色の関係性を可視化することが可能だと考えられる．
 また，\colorname{}から想起される色のデータをアンケートから収集することで，
 ユーザ特性による想起される色の違いを可視化することが可能だと考えられる．
 
